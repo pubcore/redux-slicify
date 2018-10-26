@@ -1,0 +1,49 @@
+{
+  "scripts": {
+    "test": "nyc --reporter=text mocha --inspect --require babel-register --require source-map-support --recursive",
+    "build": "babel src --out-dir js",
+    "prepare": "npm run build && webpack --optimize-minimize",
+    "watch": "babel --watch src --out-dir js",
+    "coverage": "nyc report --reporter=text-lcov"
+  },
+  "main": "js/index.js",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "name": "@pubcore/redux-slicify",
+  "version": "1.0.0",
+  "description": "let work actions and reducers relative to a state-slice",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pubcore/redux-slicify.git"
+  },
+  "keywords": [
+    "redux"
+  ],
+  "author": "pubcore",
+  "bugs": {
+    "url": "https://github.com/pubcore/redux-slicify/issues"
+  },
+  "homepage": "https://github.com/pubcore/redux-slicify#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.7.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
