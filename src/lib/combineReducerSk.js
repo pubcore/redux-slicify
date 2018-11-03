@@ -19,7 +19,7 @@ const combineSk = (reducers, sk='') => {
 				sk + key,
 				value[1] || undefined
 			)
-		}else if(sk){
+		}else{
 			combined[key] = combineSk(value, sk + key)
 		}
 	})

@@ -10,7 +10,10 @@ var combinedSkRed = [sk => combineReducerSk({
 
 var rootReducer = combineReducerSk({
 	a:s => s||{},
-	b:combinedSkRed
+	b:combinedSkRed,
+	c: {
+		d:combinedSkRed
+	}
 })
 
 const add = x => ({
@@ -29,6 +32,14 @@ describe('slicify', () => {
 				m:{
 					x:1,
 					y:0
+				}
+			},
+			c:{
+				d: {
+					m:{
+						x:0,
+						y:0
+					}
 				}
 			}
 		})
