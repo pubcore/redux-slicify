@@ -17,7 +17,7 @@
     ]
   },
   "name": "@pubcore/redux-slicify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "let work actions and reducers relative to a state-slice",
   "directories": {
     "test": "test"
